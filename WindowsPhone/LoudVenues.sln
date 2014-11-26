@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010 Express for Windows Phone
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoudVenues", "LoudVenues\LoudVenues.csproj", "{ADDA5523-BCFD-45B8-AAD5-CBC8CAAD516F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TranslatorService.Speech", "TranslatorService.Speech\TranslatorService.Speech.csproj", "{5F4C448F-56F6-4C77-9149-BD28CF9FCA5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoursquareService", "FoursquareService\FoursquareService.csproj", "{E953C7A8-E1C2-4643-97A8-53ECB1FB392A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoundLibrary", "SoundLibrary\SoundLibrary.csproj", "{2D1507D7-4F46-4F06-9E3B-EEA88A0E45BE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ADDA5523-BCFD-45B8-AAD5-CBC8CAAD516F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADDA5523-BCFD-45B8-AAD5-CBC8CAAD516F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADDA5523-BCFD-45B8-AAD5-CBC8CAAD516F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{ADDA5523-BCFD-45B8-AAD5-CBC8CAAD516F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADDA5523-BCFD-45B8-AAD5-CBC8CAAD516F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADDA5523-BCFD-45B8-AAD5-CBC8CAAD516F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{5F4C448F-56F6-4C77-9149-BD28CF9FCA5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F4C448F-56F6-4C77-9149-BD28CF9FCA5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F4C448F-56F6-4C77-9149-BD28CF9FCA5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F4C448F-56F6-4C77-9149-BD28CF9FCA5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E953C7A8-E1C2-4643-97A8-53ECB1FB392A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E953C7A8-E1C2-4643-97A8-53ECB1FB392A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E953C7A8-E1C2-4643-97A8-53ECB1FB392A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E953C7A8-E1C2-4643-97A8-53ECB1FB392A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D1507D7-4F46-4F06-9E3B-EEA88A0E45BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D1507D7-4F46-4F06-9E3B-EEA88A0E45BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D1507D7-4F46-4F06-9E3B-EEA88A0E45BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D1507D7-4F46-4F06-9E3B-EEA88A0E45BE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
