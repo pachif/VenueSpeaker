@@ -19,14 +19,14 @@ namespace SoundLibrary
     public class SoundCube
     {
         private Queue<SoundEffect> queue;
-        private bool isPlaying;
+        private bool stopActive;
         private BackgroundWorker soundWorker; 
 
         public SoundCube()
         {
             queue = new Queue<SoundEffect>();
             soundWorker = new BackgroundWorker();
-            soundWorker.DoWork += new DoWorkEventHandler(bw_DoWork);
+            soundWorker.DoWork += new DoWorkEventHandler(BackgroundPlayQueueWork);
         }
 
         public void AddToQueue(SoundEffect se) 
@@ -42,33 +42,27 @@ namespace SoundLibrary
 
         public void StartPlayingQueue()
         {
-            soundWorker.RunWorkerAsync();
-
-            if (isPlaying)
+            if (soundWorker.IsBusy)
                 return;
-            
-            while (queue.Count > 0)
-            {
-                SoundEffect se = queue.Dequeue();
-                var timeSlepping = se.Duration;
-                FrameworkDispatcher.Update();
-                se.Play();
-                isPlaying = true;
-                System.Threading.Thread.Sleep(timeSlepping.Add(new TimeSpan(0, 0, 2)));
-            }
 
-            isPlaying = false;
+            stopActive = false;
+            soundWorker.RunWorkerAsync();
         }
 
-        void bw_DoWork(object sender, DoWorkEventArgs e)
+        public void StopPlayingQueue()
         {
-            while (queue.Count > 0)
+            stopActive = true;
+        }
+
+        private void BackgroundPlayQueueWork(object sender, DoWorkEventArgs e)
+        {
+            while (queue.Count > 0 && !stopActive) 
             {
                 SoundEffect se = queue.Dequeue();
                 var timeSlepping = se.Duration;
                 FrameworkDispatcher.Update();
                 se.Play();
-                isPlaying = true;
+                // avoid sound overlapping doing some sleeping, LOL
                 System.Threading.Thread.Sleep(timeSlepping.Add(new TimeSpan(0, 0, 2)));
             }
         }

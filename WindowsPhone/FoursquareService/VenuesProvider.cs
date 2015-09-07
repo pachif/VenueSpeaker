@@ -14,6 +14,7 @@ using System.IO;
 using System.Text;
 using FourSquare.SharpSquare.Core;
 using Newtonsoft.Json;
+using System.Globalization;
 
 namespace FoursquareService
 {
@@ -54,7 +55,18 @@ namespace FoursquareService
 
         public void GetNearVenues(double lat, double longitude)
         {
-            string url = string.Format("https://api.foursquare.com/v2/venues/search?ll={0},{1}&client_id={2}&client_secret={3}&v=20130815&limit=10", lat, longitude, ClientID, SecretID);
+            GetNearVenues(lat, longitude, 10);
+        }
+
+        public void GetNearVenues(double lat, double longitude, int limit)
+        {
+            if (limit>30)
+            {
+                limit = 10;
+            }
+            CultureInfo cinfo = new CultureInfo("en-US");
+
+            string url = string.Format(cinfo.NumberFormat, "https://api.foursquare.com/v2/venues/search?ll={0},{1}&client_id={2}&client_secret={3}&v=20130815&limit={4}", lat, longitude, ClientID, SecretID, limit);
             consumer.GetUrlAsync(url);
         }
 

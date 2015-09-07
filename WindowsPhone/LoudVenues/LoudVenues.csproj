@@ -50,6 +50,7 @@
   <ItemGroup>
     <Reference Include="Microsoft.Phone" />
     <Reference Include="Microsoft.Phone.Controls, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone.Controls.Maps, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e" />
     <Reference Include="Microsoft.Phone.Controls.Toolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b772ad94eb9ca604, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Phone.Interop" />
     <Reference Include="Microsoft.Phone.Reactive" />
@@ -58,6 +59,8 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Device" />
     <Reference Include="System.Net" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Windows" />
     <Reference Include="System.Xml" />
     <Reference Include="mscorlib.extensions" />
@@ -93,7 +96,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\settings.png" />
-    <EmbeddedResource Include="Resources\pause.png" />
+    <Content Include="Resources\pause.png" />
     <Content Include="Resources\play.png" />
     <Content Include="SplashScreenImage.jpg" />
   </ItemGroup>
